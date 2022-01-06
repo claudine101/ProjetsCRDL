@@ -150,9 +150,10 @@ namespace ProjetsCRDL
 
             bundles.Add(new ScriptBundle("~/Assets/js/datatables").Include(
            "~/Assets/js/datatables/datatables.js"));
-            //FRONTED
+            //FRONTED POUR LOGIN
             bundles.Add(new ScriptBundle("~/Frontend/css").Include(
           "~/Frontend/css/style.css"));
+            
             bundles.Add(new ScriptBundle("~/Frontend/js").Include(
          "~/Frontend/js/bootstrap.js",
          "~/Frontend/js/popper.js",
