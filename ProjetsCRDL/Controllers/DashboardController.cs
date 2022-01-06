@@ -19,6 +19,7 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(utilisateur user)
@@ -46,34 +47,13 @@ namespace TEMPLATE.Controllers
                 Session["IDEmploy"] = result.employeStation;
                 Session["association"] = "";
                 ;
-                //if (result.profile_name == "employe")
-                //{
-                   ///Session["IDEmploye"] = result.employeAssociation;
-                //    Session["IDEmploy"] = result.employeStation;
-                //    return RedirectToAction("Index", "Dashboard");
-                    
-                //}
                 if (result.profile_name == "Admin")
                 {
                     return RedirectToAction("Index", "Dashboard");
                 }
                 if (result.profile_name == "employe")
                 {
-                    // var aa=@Session["IDEmploy"];
-                    // var IDS = from e in db.employe_station_lavage
-                    //        join s in db.station_lavage
-                    //            on e.ID_station equals s.ID_station
-                    //          where (e.ID_employ == 2)
-                    //        select new
-                    //        {
-                    //            station = s.ID_station,
-                               
-                    //        };
-                    // var resultE = IDS.FirstOrDefault();
-                    //if (resultE != null)
-                    //{
-                    //    Session["station"] = resultE.station ;
-                    //}
+                  
                     return RedirectToAction("Dashboard", "ClientStation");
                 }
             }
